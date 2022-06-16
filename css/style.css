@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.container {
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  background-color: #f6f6fe;
+}
+
+header h2 {
+  font-size: 2rem;
+  color: #494c5f;
+  margin: 1rem;
+  font-weight: 600;
+}
+header .switch {
+  display: flex;
+}
+header .switch h3 {
+  font-size: 1rem;
+  color: #b3b5c6;
+  padding: 0.6rem;
+  line-height: 1.4;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+
+.checkbox .check {
+  position: relative;
+  width: 70px;
+  height: 35px;
+  -webkit-appearance: none;
+  border-radius: 20px;
+  outline: none;
+  background-color: #a3a8f0;
+}
+.checkbox .check:checked {
+  background-color: #a3a8f0;
+}
+.checkbox .check::before {
+  background-color: #fff;
+  transition: 0.4s;
+  left: 0;
+  position: absolute;
+  content: "";
+  border-radius: 20px;
+  width: 35px;
+  height: 35px;
+}
+.checkbox .check:checked::before {
+  left: 35px;
+  transition: 0.4s;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+.content .box {
+  background-color: #fff;
+  padding: 1.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+}
+.content .box h1 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.content .box p {
+  color: #494c5f;
+}
+.content .box .main-text {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.content .box .border-bottom {
+  border-bottom: 1px solid #b3b5c6;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+}
+.content .box .btn {
+  all: unset;
+  background: linear-gradient(#a3a8f0, #696fdd);
+  color: #FFF;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 50vw;
+  text-align: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.content .box .btn:hover {
+  background: none;
+  border: 1px solid #b3b5c6;
+  color: #a3a8f0;
+  transition: 0.4s;
+}
+.content .active {
+  background: linear-gradient(#a3a8f0, #696fdd);
+  border-bottom: 1px solid #f6f6fe;
+}
+.content .active h1 {
+  color: #fff;
+}
+.content .active p {
+  color: #fff;
+}
+.content .active .active-btn {
+  all: unset;
+  background-color: #fff;
+  color: #a3a8f0;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: 0.4s;
+  text-align: center;
+  width: 50vw;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+.content .active .active-btn:hover {
+  background: none;
+  border: 1px solid #f6f6fe;
+  color: #fff;
+}
+
+@media (min-width: 800px) {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .content .box .btn,
+.content .box .active-btn {
+    width: 300px;
+  }
+  .content .active:hover {
+    transform: scale(1.06);
+    transition: 0.4s;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
